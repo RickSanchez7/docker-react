@@ -1,7 +1,10 @@
 language: node_js
+node_js:
+  - 12
 sudo: required
 services:
   - docker
 
 before_install:
+  - npm i -g npm@latest
   - docker build -t ricardo77/docker-react -f Dockerfile.dev .
